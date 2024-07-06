@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: black;
+    }
+
+    h1 {
+      color: aliceblue;
+    }
+
+    .cal {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .row {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 10px 19px;
+      border-radius: 50%;
+      text-align: center;
+      /* display: flex;
+      align-items: center;
+      justify-content: center; */
+      font-size: xx-large;
+      color: aliceblue;
+      border: none;
+    }
+
+    .row:nth-of-type(2)>.btn:nth-of-type(4) {
+      padding: 11px 24px;
+    }
+
+    .row:nth-of-type(3)>.btn:nth-of-type(4) {
+      padding: 10px 23px;
+    }
+
+    .row:nth-of-type(4)>.btn:nth-of-type(2) {
+      padding: 11px 24px;
+    }
+
+    .row:nth-of-type(4)>.btn:nth-of-type(4) {
+      padding: 11px 24px;
+    }
+
+    .row:nth-of-type(5)>.btn:nth-of-type(1) {
+      padding: 10px 24px;
+      border-radius: 4%;
+    }
+
+    .blackBtn {
+      background-color: rgb(112, 112, 112);
+    }
+
+    .yellowBtn {
+      background-color: orange;
+    }
+
+    .result {
+      color: aliceblue;
+      font-size: 50px;
+      position: absolute;
+      bottom: 120px;
+      left: 200px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Calculator</h1>
+
+  <div class="cal">
+    <div class="row">
+      <button onclick="
+
+        document.getElementById('result').innerText = cal += '1';
+        
+        " class="btn blackBtn" id="1">1</button>
+
+      <button onclick="
+      document.getElementById('result').innerText = cal += '2';
+      " class="btn blackBtn" id="2">2</button>
+
+      <button onclick="
+      document.getElementById('result').innerText = cal = cal + '3';
+      " class="btn blackBtn" id="3">3</button>
+
+      <button onclick="
+      document.getElementById('result').innerText = cal = cal + '+';
+      " class="btn yellowBtn" id="+">+</button>
+    </div>
+    <div class="row">
+      <button onclick="
+        document.getElementById('result').innerText = cal = cal + '4';
+        " class="btn blackBtn" id="4">4</button>
+
+      <button onclick="
+      document.getElementById('result').innerText = cal = cal + '5';
+      " class="btn blackBtn" id="5">5</button>
+
+      <button onclick="
+      document.getElementById('result').innerText = cal = cal + '6';
+      " class="btn blackBtn" id="6">6</button>
+
+      <button onclick="
+      document.getElementById('result').innerText = cal = cal + '-';
+      " class="btn yellowBtn" id="-">-</button>
+    </div>
+    <div class="row">
+      <button onclick="
+        document.getElementById('result').innerText = cal = cal + '7';
+        " class="btn blackBtn" id="7">7</button>
+
+      <button onclick="
+       document.getElementById('result').innerText = cal = cal + '8';
+      " class="btn blackBtn" id="8">8</button>
+
+      <button onclick="
+      document.getElementById('result').innerText = cal = cal + '9';
+      " class="btn blackBtn" id="9">9</button>
+
+      <button onclick="
+      document.getElementById('result').innerText = cal = cal + '*';
+      " class="btn yellowBtn" id="*">*</button>
+    </div>
+    <div class="row">
+      <button onclick="
+        document.getElementById('result').innerText = cal = cal + '0';
+        " class="btn blackBtn" id="0">0</button>
+
+      <button onclick="
+      document.getElementById('result').innerText = cal = cal + '.';
+      " class="btn blackBtn" id=".">.</button>
+
+      <button onclick="
+      document.getElementById('result').innerText = eval(cal);
+      " class="btn blackBtn">=</button>
+
+      <button onclick="
+      document.getElementById('result').innerText = cal = cal + '/';
+      " class="btn yellowBtn" id="/">/</button>
+    </div>
+    <div class="row">
+      <button onclick="
+        document.getElementById('result').innerText = cal = '';
+        " class="btn blackBtn" id="clear">Clear</button>
+    </div>
+  </div>
+
+  <div class="result" id="result"></div>
+  <script>
+
+    let cal = "";
+
+  </script>
+</body>
+
+</html>
